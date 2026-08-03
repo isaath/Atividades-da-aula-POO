@@ -13,5 +13,21 @@ public class Estudante {
         this.notas = notas;
     }
 
+    //gets e sets
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public ArrayList<Double> getNotas(){
+        return notas;
+    }
+
+    public void setNotas(ArrayList<Double> notas){
+        this.notas = notas;
+    }
 
 }
