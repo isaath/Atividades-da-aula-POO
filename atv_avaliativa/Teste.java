@@ -33,5 +33,5 @@ public class Teste {
         System.out.println("A menor nota de "+estudante.getNome()+" é: "+mn);
 
         scanner.close();
-    }
+    }a
 }
