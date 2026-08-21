@@ -11,7 +11,7 @@ public class Estudante {
     //contrutor
     public Estudante(String nome, ArrayList<Double> listaDeNotas){
         this.nome = nome;
-        this.notas = notas;
+        this.notas = listaDeNotas;
     }
 
     //gets e sets
@@ -36,34 +36,24 @@ public class Estudante {
         for (Double nota : novasNotas) {
             this.notas.add(nota);
         }
-        System.out.println("\nNotas salvas para " + getNome() + ": " + getNotas()); // exibe o resultado final
+
     }
 
-    public double calculaMedia(ArrayList<Double> notas){
-        //evitar divisoes por 0 se estiver vazia
-        if(this.notas.isEmpty()){  //isEmpty --> verifica se o array está totalmente vazio
+    public double calculaMedia() {
+        if (this.notas.isEmpty()) {
             return 0.0;
         }
 
-        //somar todas as notas do arraylist
         double soma = 0.0;
-        for (double nota : this.notas){
-            soma = soma + nota;
+        for (double nota : this.notas) {
+            soma += nota;
         }
 
-        media = soma / this.notas.size(); //divide a soma pelo tamanho do arraylist
-        return media;
+        this.media = soma / this.notas.size();
+        return this.media;
     }
 
-    public double menorNota(ArrayList<Double> notas){
-        double mn = 10.0;
-        for(double nota : this.notas){
-            if(nota < mn){
-                mn = nota;
-            }
-        }
-
-        return mn;
     }
+
 
 }

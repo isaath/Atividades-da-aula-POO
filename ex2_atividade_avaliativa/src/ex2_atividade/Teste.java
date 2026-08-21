@@ -29,24 +29,23 @@ public class Teste {
 
             listaDeEstudantes.add(estudante); //adiciona o estudanye criado na lista principal
 
-
-
-            System.out.println("Deseja inserir mais estudantes (0 - sim   1 - não): ");
+            System.out.println("Deseja inserir mais estudantes (1 - sim   0 - não): ");
             escolha = scanner.nextInt();
+            scanner.nextLine(); //limpando o buffer do scanner
         }while(escolha!=0);
 
+        ArrayList<Estudante> estudantesAprovados = new ArrayList<>();
+
+        for (Estudante e : listaDeEstudantes) {
+            // Se a média for maior ou igual a 6.0
+            if (e.calculaMedia() >= 6.0) {
+                estudantesAprovados.add(e);
+            }
+        }
 
 
 
-        // chama o metodo passando a lista pronta
-        estudante.insereNotas(listaDeNotas);
 
-        //chamar o metodo calcularMedia
-        double media = estudante.calculaMedia(listaDeNotas);
-        System.out.println("A média do aluno " + estudante.getNome() + " é: " + media);
-
-        double mn = estudante.menorNota(listaDeNotas);
-        System.out.println("A menor nota de "+estudante.getNome()+" é: "+mn);
 
         scanner.close();
     }
