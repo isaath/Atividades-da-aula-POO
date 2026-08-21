@@ -33,8 +33,8 @@ public class Estudante {
 
     //metodos
     public void insereNotas(ArrayList<Double> novasNotas) {
-        for (Double nota : novasNotas) {
-            this.notas.add(nota);
+        for (Double nota : novasNotas) { //para cada item double chamado nota eu faço isso na lista de novas notas
+            this.notas.add(nota); //pegando a nota que recebi como parametro e adicionando no final da lista de notas do estudanye
         }
 
     }
@@ -45,15 +45,13 @@ public class Estudante {
         }
 
         double soma = 0.0;
-        for (double nota : this.notas) {
-            soma += nota;
+        for (double nota : this.notas) { //para cada num(nota) que esta na lista "notas" faça isso
+            soma += nota; //soma igual a soma mais nota
         }
 
-        this.media = soma / this.notas.size();
-        return this.media;
+        media = soma / notas.size(); //calcula a média pegando o tamanho das notas
+        return media;
     }
-
-    }
-
 
 }
+
