@@ -7,51 +7,60 @@ public class Estudante {
     private ArrayList<Double> notas = new ArrayList<>();
     private double media = 0.0;
 
-
-    //contrutor
-    public Estudante(String nome, ArrayList<Double> listaDeNotas){
+    //construtor
+    public Estudante(String nome, ArrayList<Double> listaDeNotas) {
         this.nome = nome;
         this.notas = listaDeNotas;
     }
 
-    //gets e sets
-    public String getNome(){
+    //gets e Sets
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public ArrayList<Double> getNotas(){
+    public ArrayList<Double> getNotas() {
         return notas;
     }
 
-    public void setNotas(ArrayList<Double> notas){
+    public void setNotas(ArrayList<Double> notas) {
         this.notas = notas;
     }
 
-    //metodos
-    public void insereNotas(ArrayList<Double> novasNotas) {
-        for (Double nota : novasNotas) { //para cada item double chamado nota eu faço isso na lista de novas notas
-            this.notas.add(nota); //pegando a nota que recebi como parametro e adicionando no final da lista de notas do estudanye
-        }
-
-    }
-
+    // media aritmetica simples
     public double calculaMedia() {
         if (this.notas.isEmpty()) {
             return 0.0;
         }
 
         double soma = 0.0;
-        for (double nota : this.notas) { //para cada num(nota) que esta na lista "notas" faça isso
-            soma += nota; //soma igual a soma mais nota
+        for (double nota : this.notas) {
+            soma += nota;
         }
 
-        media = soma / notas.size(); //calcula a média pegando o tamanho das notas
-        return media;
+        this.media = soma / this.notas.size();
+        return this.media;
     }
 
-}
+    //SOBRECARGA: média ponderada (recebe o array de pesos)
+    public double calculaMedia(int[] pesos) {
+        if (this.notas.isEmpty() || pesos == null || pesos.length != 5) {
+            return 0.0;
+        }
 
+        double somaNotasVezesPesos = 0.0;
+        int somaDosPesos = 0;
+
+        //calcular a media ponderada das 5 notas
+        for (int i = 0; i < 5; i++) {
+            somaNotasVezesPesos += this.notas.get(i) * pesos[i]; //this.notas.get(i) --> pega a nota do numero i da lista de notas
+            somaDosPesos += pesos[i];
+        }
+
+        this.media = somaNotasVezesPesos / somaDosPesos;
+        return this.media;
+    }
+}
