@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Atividades-da-aula-POO3.iml" filepath="$PROJECT_DIR$/.idea/Atividades-da-aula-POO3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Formula1/Formula1.iml" filepath="$PROJECT_DIR$/Formula1/Formula1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Formula1/Formula1/Formula2.iml" filepath="$PROJECT_DIR$/Formula1/Formula1/Formula2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lampada 2303/Lampada 2303.iml" filepath="$PROJECT_DIR$/Lampada 2303/Lampada 2303.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex3_atividade_avaliativa/ex3_atividade_avaliativa.iml" filepath="$PROJECT_DIR$/ex3_atividade_avaliativa/ex3_atividade_avaliativa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex4_atividade_avaliativa/ex4_atividade_avaliativa.iml" filepath="$PROJECT_DIR$/ex4_atividade_avaliativa/ex4_atividade_avaliativa.iml" />
+    </modules>
+  </component>
+</project>
