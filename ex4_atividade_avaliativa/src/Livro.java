@@ -8,7 +8,7 @@ public class Livro extends ItensBlibioteca{
     }
 
     //gets e sets
-    public boolean getDisponivel(){
+    public boolean isDisponivel(){
         return disponivel;
     }
     public void setDisponivel(boolean disponivel){
