@@ -44,7 +44,6 @@ public class Teste {
                             scanner.nextLine(); //limpando buffer do teclado
                             String titulo = scanner.nextLine();
                             System.out.println("Insira a situação dele (1 - disponível   2 - indisponível): ");
-                            scanner.nextLine();
                             int situacao = scanner.nextInt();
 
                             //se a pessoa digitar diferente de 1 ou 2
@@ -93,6 +92,11 @@ public class Teste {
             }else{
                 do {
                     System.out.println("--- SISTEMA DE REGISTRO DE EMPRÉSTIMO ---");
+
+                    for (Livro livro : listaLivros) {
+                        System.out.println("Titulo: "+livro.getTitulo()+"\n");
+                    }
+
                     System.out.println("Insira o título do livro que deseja registrar: ");
                     scanner.nextLine(); //limpa o enter anterior
                     String livroEmprestado = scanner.nextLine();
@@ -102,9 +106,9 @@ public class Teste {
                         if (livro.getTitulo().equals(livroEmprestado)) { //equals --> metodo para comparar strings
                             //mostra a situacao atual
                             if (livro.isDisponivel()) { //verifica qual a situação do livro - pega la no get (isDisponivel --> true)
-                                System.out.println("Atualmente ele está: Disponível");
-                            } else {
                                 System.out.println("Atualmente ele está: Indisponível");
+                            } else {
+                                System.out.println("Atualmente ele está: Disponível");
                             }
 
                             //pergunta a nova opção
@@ -127,6 +131,6 @@ public class Teste {
             scanner.nextLine();
             escolha4 = scanner.nextInt();
         }while (escolha4!=0);
-
+        System.out.println("Sistema finalizado!");
     }
 }
