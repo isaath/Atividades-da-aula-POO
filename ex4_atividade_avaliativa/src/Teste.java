@@ -16,6 +16,7 @@ public class Teste {
         int escolha3 = 0;
         int escolha4 = 0;
         int escolha5 = 0;
+        int escolha6 = 0;
 
 
         System.out.println("--- SISTEMA DE BIBLIOTECA ---");
@@ -67,7 +68,7 @@ public class Teste {
 
                     }else{
                         do {
-                            System.out.println("--- CADSTRO DE PERIÓDICOS ---");
+                            System.out.println("--- CADASTRO DE PERIÓDICOS ---");
                             System.out.println("Insira o título: ");
                             scanner.nextLine(); //limpando o buffer
                             String titulo = scanner.nextLine();
